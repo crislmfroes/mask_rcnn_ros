@@ -1,0 +1,12 @@
+node:
+    rate: 100
+publisher:
+    topic: /mask_rcnn_ros/results
+visualization:
+    topic: /mask_rcnn_ros/debug
+subscriber:
+    topic: /camera/rgb/image_color
+config:
+    backbone: resnet50
+    image_max_dim: 512
+    image_min_dim: 256

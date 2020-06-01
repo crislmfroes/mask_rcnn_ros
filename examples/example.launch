@@ -1,8 +1,5 @@
 <launch>
-    <node name="mask_rcnn" pkg="mask_rcnn_ros" type="mask_rcnn_node" output="screen">
-        <remap from="~input" to="/camera/rgb/image_color" />
-        <param name="~visualization" value="true" />
-    </node>
+    <include file="$(find mask_rcnn_ros)/launch/mask_rcnn_ros.launch" />
 
     <node name="bag" pkg="rosbag" type="play"
         args="-l $(find mask_rcnn_ros)/examples/rgbd_dataset_freiburg3_long_office_household.bag" />

@@ -1,0 +1,7 @@
+<launch>
+    <arg name="config_path" value="$(find mask_rcnn_ros)/config/resnet50.yml" />
+
+    <rosparam command="load" ns="mask_rcnn" file="$(arg config_path)" />
+
+    <node name="mask_rcnn" pkg="mask_rcnn_ros" type="mask_rcnn_node" output="screen" />
+</launch>
